@@ -12,14 +12,14 @@ import static io.qameta.allure.Allure.step;
 public class AndroidSelenideTestsWiki extends TestBase {
     @Test
     void searchTest() {
-        step("Click skip", () -> {
+        step("Кликнуть SKIP", () -> {
             $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
         });
-        step("Type search", () -> {
+        step("Поиск", () -> {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();
             $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("BrowserStack");
         });
-        step("Verify content found", () ->
+        step("Проверка поисковой выдачи", () ->
                 $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0)));
     }
 }
