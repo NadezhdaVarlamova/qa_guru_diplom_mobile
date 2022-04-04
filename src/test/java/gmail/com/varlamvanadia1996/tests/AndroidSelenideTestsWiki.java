@@ -19,7 +19,7 @@ public class AndroidSelenideTestsWiki extends TestBase {
             $(MobileBy.id("org.wikipedia.alpha:id/addLangContainer")).click();
         });
         step("Кликнуть на ADD LANGUAGE", () -> {
-            $(MobileBy.id("org.wikipedia.alpha:id/wiki_language_title")).click();
+            $(MobileBy.id("//android.widget.TextView[@text='ADD LANGUAG']")).click();
         });
         step("Кликнуть на Русский", () -> {
             $(MobileBy.xpath("//android.widget.TextView[@text='Русский']")).click();
