@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
@@ -30,8 +31,9 @@ public class AndroidSelenideTestsWiki extends TestBase {
         step("Нажать стрелочку", () -> {
             $(MobileBy.className("android.widget.ImageButton")).click();
         });
-        step("Проверить, что Русский в списке", () -> {
-            $(MobileBy.xpath("//android.widget.TextView[@text='2. Русский']")).shouldBe(Condition.visible);
+        step("Проверить, что в спискок состоит из 2х языков", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/languagesList"))
+                    .$$(MobileBy.id("org.wikipedia.alpha:id/option_label")).shouldHave(size(2));
         });
 
         step("Перейти на следующий экран", () -> {
