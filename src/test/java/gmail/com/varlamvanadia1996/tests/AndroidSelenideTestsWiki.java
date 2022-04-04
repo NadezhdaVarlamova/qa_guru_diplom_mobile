@@ -1,9 +1,12 @@
 package gmail.com.varlamvanadia1996.tests;
 
+import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
+import static com.codeborne.selenide.Condition.attribute;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -12,9 +15,61 @@ import static io.qameta.allure.Allure.step;
 public class AndroidSelenideTestsWiki extends TestBase {
     @Test
     void searchTest() {
-        step("Кликнуть SKIP", () -> {
-            $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
+        step("Кликнуть на ADD OR EDIT LANGUAGE", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/addLangContainer")).click();
         });
+        step("Кликнуть на ADD LANGUAGE", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/wiki_language_title")).click();
+        });
+        step("Кликнуть на Русский", () -> {
+            $(MobileBy.xpath("//android.widget.TextView[@text='Русский']")).click();
+        });
+        step("Проверить, что Русский в списке", () -> {
+            $(MobileBy.xpath("//android.widget.TextView[@text='Русский']")).shouldBe(Condition.visible);
+        });
+        step("Нажать стрелочку", () -> {
+            $(MobileBy.className("android.widget.ImageButton")).click();
+        });
+        step("Проверить, что Русский в списке", () -> {
+            $(MobileBy.xpath("//android.widget.TextView[@text='2. Русский']")).shouldBe(Condition.visible);
+        });
+
+        step("Перейти на следующий экран", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
+        });
+
+        step("Проверить наличие текста на втором экране", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/primaryTextView")).shouldHave(text("New ways to explore"));
+        });
+
+        step("Перейти на следующий экран", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
+        });
+
+        step("Проверить наличие текста на третьем экране", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/primaryTextView")).shouldHave(text("Reading lists with sync"));
+        });
+
+        step("Перейти на следующий экран", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
+        });
+
+        step("Проверить наличие текста на четвертом экране", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/primaryTextView")).shouldHave(text("Send anonymous data"));
+        });
+
+        step("Переключить ползунок", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/switchView")).click();
+        });
+
+        step("Проверить, что ползунок не активен", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/switchView")).shouldHave(attribute("checked", "false"));
+        });
+
+        step("Кликнуть GET STARTED", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_done_button")).click();
+        });
+
         step("Поиск", () -> {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();
             $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("BrowserStack");
