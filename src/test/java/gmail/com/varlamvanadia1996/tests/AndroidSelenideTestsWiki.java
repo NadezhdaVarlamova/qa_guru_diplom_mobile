@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 
 public class AndroidSelenideTestsWiki extends TestBase {
     @Test
-    void searchTest() {
+    void wikiTest() {
         step("Кликнуть на ADD OR EDIT LANGUAGE", () -> {
             $(MobileBy.id("org.wikipedia.alpha:id/addLangContainer")).click();
         });
