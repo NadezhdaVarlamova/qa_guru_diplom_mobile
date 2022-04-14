@@ -1,4 +1,4 @@
-# Проект автоматизации тестирования для <a target="_blank" href="https://leroymerlin.ru/">ВкусВилл</a> <img src="img/logo/VV.svg" width="50" height="50"  alt="IDEA"/>
+# Проект мобильной автоматизации тестирования для приложения Wikipedia
 
 ## :open_book: Содержание:
 - [Технологии и инструменты](#gear-в-проекте-используются-следующие-технологии-и-инструменты)
@@ -20,41 +20,25 @@
 <img src="img/logo/Junit5.svg" width="50" height="50"  alt="JUnit 5"/>
 <img src="img/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/>
 <img src="img/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/>
-<img src="img/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/
-<img src="img/logo/Allure.svg" width="50" height="50"  alt="Allure"/>
 <img src="img/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/>
 <img src="img/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/>
 <img src="img/logo/Allure.svg" width="50" height="50"  alt="Allure"/>
 <img src="img/logo/Allure_TO.svg" width="50" height="50"  alt="Allure_TO"/>
-<img src="img/logo/Jira.svg" width="50" height="50"  alt="Jira"/>
 </p>
 
 ## :heavy_check_mark: Описание
-В проекте автоматизирована проверка главной страницы сайта ВкусВилл, а также отображение попапа адреса доставки при добавлении товара в корзину и поиск. Использован паттерн проектирования автотестов PageObject.
+В проекте автоматизирована проверка мобильного приложения Wiki.
 
 ## :heavy_check_mark: Что проверяем
 
-> - Переход с главной в каталог;
-> - Переход с главной на страницу акций;
-> - Переход с главной на страницу магазинов;
-> - Поиск товара;
-> - Отображение поапа адреса при добавлении товара в корзину.
+> - Проверка 4 страниц ознакомительного попап при открытии приложения.
 
-## <img width="4%" title="Jenkins" src="img/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/VarlamovaNadezhda_qa_guru_10_diplom_ui/)
+
+## <img width="4%" title="Jenkins" src="img/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/VarlamovaNadezhda_qa_guru_10_diplom_mobile/)
 
 Для запуска тестов из Jenkins:
-1. Необходимо нажать кнопку "Собрать с параметрами".
-   <img src="img/screen/Screenshot_7.jpg" alt="Jenkins"/>
-2. Выбрать параметры.
-   <img src="img/screen/Screenshot_8.jpg" alt="Jenkins"/>
-3. Нажать кнопку "Собрать".
-
-### :heavy_plus_sign: Параметры сборки
-
-> - BROWSER (браузер)
-> - VERSION (версия браузера)
-> - RESOLUTION (размер окна браузера)
-> - BASEURL (адрес сайта)
+1. Необходимо нажать кнопку "Собрать сейчас".
+   <img src="img/screen/TestRan.jpg" alt="Jenkins"/>
 
 ## :computer: Запуск тестов из терминала
 
