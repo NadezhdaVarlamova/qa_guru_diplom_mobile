@@ -1,16 +1,17 @@
-# Проект автоматизации тестирования для <a target="_blank" href="https://leroymerlin.ru/">ВкусВилл</a> <img src="img/logo/leroy-merlin-logo@logotyp.us.svg" width="50" height="50"  alt="IDEA"/>
+# Проект автоматизации тестирования для <a target="_blank" href="https://leroymerlin.ru/">ВкусВилл</a> <img src="img/logo/VV.svg" width="50" height="50"  alt="IDEA"/>
 
 ## :open_book: Содержание:
-- [Технологии и инструменты](#gear-технологии-и-инструменты)
+- [Технологии и инструменты](#gear-в-проекте-используются-следующие-технологии-и-инструменты)
 - [Что проверяем](#heavy_check_mark-что-проверяем)
 - [Запуск тестов из Jenkins](#-запуск-тестов-из-jenkins)
 - [Запуск тестов из терминала](#computer-запуск-тестов-из-терминала)
-- [Отчеты](#bar_chart-отчеты)
+- [Отчеты](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
 - - [Allure](#-allure)
 - - [Telegram](#-telegram)
 - [Видео с прогоном тестов](#movie_camera-видео-с-прогоном-тестов)
+- [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
 
-## :gear: Используемые технологии и инструменты
+## :gear: В проекте используются следующие технологии и инструменты:
 
 <p align="center">
 <img src="img/logo/Idea.svg" width="50" height="50"  alt="IDEA"/>
@@ -29,7 +30,7 @@
 </p>
 
 ## :heavy_check_mark: Описание
-В проекте автоматизирована проверка главной страницы, а также отображение попапа адреса доставки при добавлении товара в корзину и поиск. Использован паттерн проектирования автотестов PageObject.
+В проекте автоматизирована проверка главной страницы сайта ВкусВилл, а также отображение попапа адреса доставки при добавлении товара в корзину и поиск. Использован паттерн проектирования автотестов PageObject.
 
 ## :heavy_check_mark: Что проверяем
 
@@ -43,9 +44,9 @@
 
 Для запуска тестов из Jenkins:
 1. Необходимо нажать кнопку "Собрать с параметрами".
-<img src="img/screen/Screenshot_7.jpg" alt="Jenkins"/>
+   <img src="img/screen/Screenshot_7.jpg" alt="Jenkins"/>
 2. Выбрать параметры.
-<img src="img/screen/Screenshot_8.jpg" alt="Jenkins"/>
+   <img src="img/screen/Screenshot_8.jpg" alt="Jenkins"/>
 3. Нажать кнопку "Собрать".
 
 ### :heavy_plus_sign: Параметры сборки
@@ -53,45 +54,57 @@
 > - BROWSER (браузер)
 > - VERSION (версия браузера)
 > - RESOLUTION (размер окна браузера)
-> - BROWSER_MOBILE (мобильный браузер)
-> - BASEURL (фдрес сайта)
+> - BASEURL (адрес сайта)
 
 ## :computer: Запуск тестов из терминала
 
-Команда для локального запуска:
+Для локального запуска необходимо выполнить команду:
 ```
 gradle clean test
 ```
 
-## :bar_chart: Отчеты
+## :bar_chart: Отчеты о прохождении тестов доступны в Allure
 
 ### <img width="3%" title="Allure" src="img/logo/Allure.svg"> Allure
 
 #### Главная страница
 
-<img src="img/screen/Screenshot_22.jpg" alt="Allure"/>
+<img src="img/screen/AllureMain.jpg" alt="Allure"/>
 
 #### Графики
 
-<img src="img/screen/Screenshot_24.jpg" alt="Allure"/>
+<img src="img/screen/AllureGraph.jpg" alt="Allure"/>
 
 #### Тесты
 
-<img src="img/screen/Screenshot_23.jpg" alt="Allure"/>
+<img src="img/screen/AllureTests.jpg" alt="Allure"/>
 
 ### <img width="3%" title="Telegram" src="img/logo/Telegram.svg"> Telegram
 
 Настроена отправка оточета ботом в Telegram
 
-<img src="img/screen/Screenshot_25.jpg" alt="Telegram"/>
+<img src="img/screen/Bot.jpg" alt="Telegram"/>
 
 ## :movie_camera: Видео с прогоном тестов
 
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 
 <p align="center">
-  <img title="Video" src="img/gif/c889306c72f897b1.gif">
+  <img title="Video" src="img/gif/test.gif">
 </p>
 
+## Проект интегрирован с Allure TestOps
+<img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> 
 
+#### Представлены тест-кейсы
+
+<img src="img/screen/TOTest.jpg" alt="TO"/>
+
+#### Представлены дашборды аналитики
+
+<img src="img/screen/TODash.jpg" alt="TO"/>
+
+#### Представлены запуски
+
+<img src="img/screen/TOLaunch.jpg" alt="TO"/>
 
