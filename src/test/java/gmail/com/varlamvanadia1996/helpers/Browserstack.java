@@ -1,13 +1,15 @@
 package gmail.com.varlamvanadia1996.helpers;
 
+import gmail.com.varlamvanadia1996.config.Credentials;
+
 import static io.restassured.RestAssured.given;
 
 public class Browserstack {
     public static String videoUrl(String sessionId) {
         return given()
-                .auth().basic("varlamova_OC1a8X", "1oZxjN4bEsDmD93A4yoM")
+                .auth().basic(Credentials.config.user(), Credentials.config.key())
                 .when()
-                .get("https://api-cloud.browserstack.com/app-automate/sessions/" + sessionId +".json")
+                .get("https://api-cloud.browserstack.com/app-automate/sessions/" + sessionId + ".json")
                 .then()
                 .statusCode(200)
                 .extract()
