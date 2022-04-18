@@ -1,6 +1,6 @@
-package gmail.com.varlamvanadia1996.helpers;
+package apk.wikipedia.helpers;
 
-import gmail.com.varlamvanadia1996.config.Credentials;
+import apk.wikipedia.config.Credentials;
 
 import static io.restassured.RestAssured.given;
 

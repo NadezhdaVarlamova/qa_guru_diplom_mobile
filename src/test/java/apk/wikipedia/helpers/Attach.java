@@ -1,4 +1,4 @@
-package gmail.com.varlamvanadia1996.helpers;
+package apk.wikipedia.helpers;
 
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;

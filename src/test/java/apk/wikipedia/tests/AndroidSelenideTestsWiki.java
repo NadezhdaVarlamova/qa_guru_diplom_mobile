@@ -1,4 +1,4 @@
-package gmail.com.varlamvanadia1996.tests;
+package apk.wikipedia.tests;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.MobileBy;

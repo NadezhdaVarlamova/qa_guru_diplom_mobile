@@ -1,7 +1,7 @@
-package gmail.com.varlamvanadia1996.drivers;
+package apk.wikipedia.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import gmail.com.varlamvanadia1996.config.Credentials;
+import apk.wikipedia.config.Credentials;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;

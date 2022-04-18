@@ -1,4 +1,4 @@
-package gmail.com.varlamvanadia1996.config;
+package apk.wikipedia.config;
 
 import org.aeonbits.owner.ConfigFactory;
 
